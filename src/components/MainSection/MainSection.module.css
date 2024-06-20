@@ -1,0 +1,9 @@
+.mainSection {
+  display: block;
+  margin-top: 85px;
+  width: 90vw;
+}
+
+.mainSection > * {
+  margin-bottom: 50px;
+}

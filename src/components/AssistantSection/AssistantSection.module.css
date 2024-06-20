@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 3%;
+  padding-right: 3%;
+  border-radius: 70px;
+  height: 40vh;
+  background-color: white;
+}
+
+.assistant-animation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+
+.assistant-animation video {
+  width: 100%;
+}

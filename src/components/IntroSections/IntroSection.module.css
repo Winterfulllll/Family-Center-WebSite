@@ -1,0 +1,16 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 3%;
+  padding-right: 3%;
+  border-radius: 70px;
+  height: 20vh;
+  background-color: white;
+}
+
+.pageName {
+  font-size: 7vw;
+  font-weight: 700;
+  color: #ffb67d;
+}
