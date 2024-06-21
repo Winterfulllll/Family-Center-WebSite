@@ -11,7 +11,7 @@ export default function HomePage() {
     <>
       <Header />
       <MainSection>
-        <IntroSection>Название</IntroSection>
+        <IntroSection>ПСИХОЛОГ</IntroSection>
         <AssistantSection />
         <div
           style={{
