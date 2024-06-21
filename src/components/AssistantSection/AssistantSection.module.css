@@ -2,21 +2,17 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-left: 3%;
-  padding-right: 3%;
+  padding-left: 5%;
+  padding-right: 5%;
   border-radius: 70px;
-  height: 40vh;
-  background-color: white;
+  height: 60vh;
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
-.assistant-animation {
-  display: flex;
-  justify-content: center;
+.assistantConstainer {
   align-items: center;
   flex-direction: column;
-  margin-top: 2rem;
-}
-
-.assistant-animation video {
-  width: 100%;
+  width: 45%;
+  padding-bottom: 15vh;
+  object-fit: contain;
 }

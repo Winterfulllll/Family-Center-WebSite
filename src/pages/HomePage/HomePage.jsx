@@ -13,6 +13,12 @@ export default function HomePage() {
       <MainSection>
         <IntroSection>Название</IntroSection>
         <AssistantSection />
+        <div
+          style={{
+            height: '2000px',
+            backgroundColor: 'lightblue',
+          }}
+        ></div>
       </MainSection>
       <Footer />
     </>
