@@ -1,7 +1,7 @@
 import classes from './AssistantSection.module.css';
-import assistantAnimation from '/assistant-animation.webm';
+// import assistantAnimation from '/assistant-animation.webm';
 
-export default function AssistantSection({ ...props }) {
+export default function AssistantSection() {
   return (
     <>
       <section className={classes.container}>

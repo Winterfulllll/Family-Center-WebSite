@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 import Logo from '../Logo/Logo';
 import ModalButton from '../ModalButton/ModalButton';
 
@@ -14,3 +16,7 @@ export default function IntroSection({ children }) {
     </>
   );
 }
+
+IntroSection.propTypes = {
+  children: PropTypes.string.isRequired,
+};
