@@ -29,6 +29,7 @@
   grid-column: 9 / 11;
   padding-right: 0px !important;
   margin-left: 90px;
+  min-width: 220px;
 }
 
 .headerContacts {

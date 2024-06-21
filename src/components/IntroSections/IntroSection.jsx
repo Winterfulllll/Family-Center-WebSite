@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 import Logo from '../Logo/Logo';
 import ModalButton from '../ModalButton/ModalButton';
@@ -12,15 +13,9 @@ export default function IntroSection({ children }) {
         <Logo />
         <div>
           <div className={classes.pageNavigation}>
-            <div className={classes.pageNavigationMain}>
-              Главная
-            </div>
-            <div className={classes.pageNavigationSpace}>
-              -
-            </div>
-            <div className={classes.pageNavigationName}>
-              Психолог
-            </div>
+            <Link to="/" className={classes.pageNavigationMain}>Главная</Link>
+            <Link to="/" className={classes.pageNavigationSpace}>-</Link>
+            <Link to="/" className={classes.pageNavigationName}>Психолог</Link>
           </div>
           <div className={classes.pageName}>{children.toUpperCase()}</div>
         </div>

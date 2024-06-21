@@ -6,7 +6,7 @@ import classes from './Logo.module.css';
 
 export default function Logo() {
   return (
-    <Link to="/other" className={classes.logo}>
+    <Link to="/" className={classes.logo}>
       <LogoSVG />
     </Link>
   );

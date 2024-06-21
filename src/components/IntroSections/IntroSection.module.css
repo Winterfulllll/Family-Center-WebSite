@@ -15,14 +15,21 @@
   font-size: 7vw;
   font-weight: 700;
   color: #ffb67d;
+  padding-bottom: 30px;
 }
 
 .pageNavigation {
-  margin-top: 12px;
+  font-size: 1vw;
+  margin-top: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: 600;
+  font-weight: 700;
+}
+
+.pageNavigation > * {
+  text-decoration: none;
+  color: black;
 }
 
 .pageNavigationMain{
