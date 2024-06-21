@@ -5,10 +5,10 @@ export default function Header() {
     <>
       <header className={classes.header}>
         <div className={classes.headerAddress}>
-          Москва, Ул.Азовская, д.33, корп.3
+          г.Москва, ул.Азовская, д.33, корп.3
         </div>
         <div className={classes.headerPhone}>
-          +74953103400
+          +7 (495) 310-34-00
         </div>
         <div className={classes.headerContacts}>
           <a href="">Контакты</a>
