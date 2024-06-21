@@ -1,10 +1,13 @@
-import classes from './Logo.module.css';
+import { Link } from 'react-router-dom';
+
 import logo from '/msc-logo.svg';
+
+import classes from './Logo.module.css';
 
 export default function Logo() {
   return (
-    <a href={import.meta.env.BASE_URL} className={classes.logo}>
-      <img src={logo} alt="logo"/>
-    </a>
+    <Link to="/other" className={classes.logo}>
+      <img src={logo} alt="logo" />
+    </Link>
   );
 }

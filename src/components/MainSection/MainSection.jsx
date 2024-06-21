@@ -7,5 +7,5 @@ export default function MainSection({ children }) {
 }
 
 MainSection.propTypes = {
-  children: PropTypes.isRequired,
+  children: PropTypes.node.isRequired,
 };
