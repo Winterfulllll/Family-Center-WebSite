@@ -1,0 +1,21 @@
+.pageNavigation {
+  font-size: 1vw;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+.pageNavigation > * {
+  text-decoration: none;
+  color: black;
+}
+
+.pageNavigationMain{
+  margin-right: 5px;
+}
+
+.pageNavigationName{
+  margin-left: 5px;
+}

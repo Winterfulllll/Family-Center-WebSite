@@ -8,12 +8,12 @@ const router = createBrowserRouter(
   [
     {
       path: '/',
-      element: <HomePage />,
+      element: <HomePage path='/'/>,
       errorElement: <ErrorPage />,
     },
     {
       path: '/other',
-      element: <OtherPage />,
+      element: <OtherPage path='/other'/>,
     },
   ],
   { basename: import.meta.env.BASE_URL },

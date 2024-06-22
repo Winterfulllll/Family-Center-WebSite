@@ -9,3 +9,25 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
+
+#overlays {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+  z-index: 100;
+}
+
+#overlays.open {
+  display: flex;
+  opacity: 1;
+  pointer-events: auto;
+}

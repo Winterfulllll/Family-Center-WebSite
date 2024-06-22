@@ -1,30 +1,27 @@
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
 
 import Logo from '../Logo/Logo';
 import ModalButton from '../ModalButton/ModalButton';
+import IntroPageNavigation from '../IntroPageNavigation/IntroPageNavigation';
 
 import classes from './IntroSection.module.css';
 
-export default function IntroSection({ children }) {
+export default function IntroSection({ children, path }) {
   return (
-    <>
-      <section className={classes.container}>
-        <Logo />
-        <div>
-          <div className={classes.pageNavigation}>
-            <Link to="/" className={classes.pageNavigationMain}>Главная</Link>
-            <Link to="/" className={classes.pageNavigationSpace}>-</Link>
-            <Link to="/" className={classes.pageNavigationName}>Психолог</Link>
-          </div>
-          <div className={classes.pageName}>{children.toUpperCase()}</div>
-        </div>
-        <ModalButton />
-      </section>
-    </>
+    <section className={classes.container} id='IntroSection'>
+      <Logo />
+      <div>
+        <IntroPageNavigation path={path}>
+          {children.charAt(0).toUpperCase() + children.slice(1).toLowerCase()}
+        </IntroPageNavigation>
+        <div className={classes.pageName}>{children.toUpperCase()}</div>
+      </div>
+      <ModalButton />
+    </section>
   );
 }
 
 IntroSection.propTypes = {
   children: PropTypes.node.isRequired,
+  path: PropTypes.string.isRequired,
 };

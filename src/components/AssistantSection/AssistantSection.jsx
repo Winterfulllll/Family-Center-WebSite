@@ -5,6 +5,7 @@ import assistantAnimation from '/assistant-animation.webm';
 import AssistantMessage from '../AssistantMessage/AssistantMessage';
 
 import classes from './AssistantSection.module.css';
+import AssistantWidget from '../AssistantWidget/AssistantWidget';
 
 export default function AssistantSection() {
   const videoRef = useRef(null);
@@ -29,7 +30,8 @@ export default function AssistantSection() {
 
   return (
     <>
-      <section ref={ref} className={classes.container}>
+      <AssistantWidget isVisible={!inView} />
+      <section ref={ref} className={classes.container} id="AssistantSection">
         <video
           ref={videoRef}
           className={classes.assistantConstainer}
@@ -38,7 +40,9 @@ export default function AssistantSection() {
         >
           <source src={assistantAnimation} type="video/webm" />
         </video>
-        <AssistantMessage pos_x='right' pos_y='center'>Психолог поможет:</AssistantMessage>
+        <AssistantMessage pos_x="right" pos_y="center">
+          Психолог поможет:
+        </AssistantMessage>
       </section>
     </>
   );
