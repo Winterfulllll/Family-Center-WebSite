@@ -1,0 +1,39 @@
+.footerInformation{
+    display: grid;
+    width: 90%;
+    grid-template-columns: 31% 45% auto;
+    margin-left: 5%;
+    margin-top: 2%;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.footerLeftPartNumber{
+    margin-top: 8%;
+}
+
+.footerLeftPartServices{
+    margin-top: 3%;
+}
+
+.footerLeftPartContacts{
+    margin-top: 3%;
+}
+
+.footerLeftPartCentre{
+    margin-top: 3%;
+    margin-bottom: 10%;
+}
+
+.footerRightPartCallNumber{
+    background-color: white;
+    width: 70%;
+    height: 40%;
+    border-radius: 30px;
+    margin-left: 16%;
+    align-content: center;
+}
+
+.footerRightPartText{
+    text-align: center;
+}
