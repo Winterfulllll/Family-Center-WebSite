@@ -28,18 +28,18 @@ export default function AssistantSection() {
   }, [inView, hasPlayed]);
 
   return (
-    <>
-      <section ref={ref} className={classes.container}>
-        <video
-          ref={videoRef}
-          className={classes.assistantConstainer}
-          muted
-          width="100"
-        >
-          <source src={assistantAnimation} type="video/webm" />
-        </video>
-        <AssistantMessage pos_x='right' pos_y='center'>Психолог поможет:</AssistantMessage>
-      </section>
-    </>
+    <section ref={ref} className={classes.container}>
+      <video
+        ref={videoRef}
+        className={classes.assistantConstainer}
+        muted
+        width="100"
+      >
+        <source src={assistantAnimation} type="video/webm" />
+      </video>
+      <AssistantMessage pos_x="right" pos_y="center">
+        Психолог поможет:
+      </AssistantMessage>
+    </section>
   );
 }

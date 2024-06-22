@@ -8,7 +8,7 @@
   gap: 10px;
   background-color: #ffb67d;
   box-shadow: 0px 2px 6px 0px rgba(149, 130, 92, 0.3);
-  z-index: 1000;
+  z-index: 10;
 }
 
 .header > div {
