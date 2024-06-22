@@ -1,0 +1,28 @@
+.container {
+  display: inline-block;
+  width: 100%;
+  background-color: rgba(147, 201, 240, 0.8);
+  height: 1100px;
+  border-radius: 70px;
+  justify-content: center;
+}
+
+.phrasePsychologist {
+  display: flex;
+  width: 90%;
+  text-align: center;
+  background-color: white;
+  border-radius: 60px;
+  height: 110px;
+  margin-top: 40px;
+  align-items: center;
+  justify-content: center;
+  font-size: 2vw;
+  font-weight: 400;
+  margin-left: 39px;
+}
+
+.textPsychologist {
+  text-align: center;
+  align-items: center;
+}

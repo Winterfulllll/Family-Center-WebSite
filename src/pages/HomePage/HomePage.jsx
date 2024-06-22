@@ -6,6 +6,7 @@ import Footer from '../../components/Footer/Footer';
 import TallDiv from '../../components/TallDiv';
 
 import './HomePage.css';
+import PsychologistSection1 from '../../components/PsychologistSection1/PsychologistSection1';
 
 export default function HomePage() {
   const path = '/';
@@ -16,44 +17,7 @@ export default function HomePage() {
       <MainSection>
         <IntroSection path={path}>ПСИХОЛОГ</IntroSection>
         <AssistantSection />
-        
-        <div className='mainPhrasePsicholog'>
-          <div className='PhrasePsicholog1'>
-            <a classname="textPsicholog">
-              Понять причины стрессовых состояний, справиться с ними
-            </a>
-          </div>
-          <div className='PhrasePsicholog1'>
-            <a classname="textPsicholog">
-              Сформировать реалистичную, позитивную и устойчивую самооценку
-            </a>
-          </div>
-          <div className='PhrasePsicholog1'>
-            <a classname="textPsicholog">
-              Открыть свой потенциал и реализовать жизненные планы
-            </a>
-          </div>
-          <div className='PhrasePsicholog1'>
-            <a classname="textPsicholog">
-              Преодолеть трудности и кризисы, адаптироваться к изменениям
-            </a>
-          </div>
-          <div className='PhrasePsicholog1'>
-            <a classname="textPsicholog">
-              Находить выходы из конфликтов, решать проблемы и достигать цели
-            </a>
-          </div>
-          <div className='PhrasePsicholog1'>
-            <a classname="textPsicholog">
-              Налаживать взаимоотношения с окружающими
-            </a>
-          </div>
-          <div className='PhrasePsicholog1'>
-            <a classname="textPsicholog">
-              Научиться эффективно общаться и выражать свои эмоции
-            </a>
-          </div>
-        </div>
+        <PsychologistSection1 />
       </MainSection>
       <Footer />
     </>
