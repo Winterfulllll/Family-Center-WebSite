@@ -1,5 +1,5 @@
 import classes from './PsychologistSection1.module.css';
-import { phychologist } from '../../data.js';
+import { phychologist } from '../../data';
 
 export default function PsychologistSection1() {
   return (

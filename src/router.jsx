@@ -1,4 +1,4 @@
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider, Navigate } from 'react-router-dom';
 
 import HomePage from './pages/HomePage/HomePage';
 import ErrorPage from './pages/ErrorPage/ErrorPage';
@@ -14,6 +14,10 @@ const router = createBrowserRouter(
     {
       path: '/other',
       element: <OtherPage path='/other'/>,
+    },
+    {
+      path: '/FamilyCenterMainWebSite',
+      element: <Navigate to="https://www.facebook.com/" />,
     },
   ],
   { basename: import.meta.env.BASE_URL },

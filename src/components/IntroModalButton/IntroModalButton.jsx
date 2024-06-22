@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 
 import IntroModalWindow from '../IntroModalWindow/IntroModalWindow';
-import ModalButtonSVG from '../../assets/icons/svgs/modal-button.svg';
+import IntroModalButtonSVG from '../../assets/icons/svgs/intro-modal-button.svg';
 
-import classes from './ModalButton.module.css';
+import classes from './IntroModalButton.module.css';
 
-export default function ModalButton() {
+export default function IntroModalButton() {
   const [isOpen, setIsOpen] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
 
@@ -22,11 +22,11 @@ export default function ModalButton() {
     <>
       <IntroModalWindow isOpen={isOpen} />
       <button
-        className={`${classes.modalButton} ${isOpen ? classes.open : ''}`}
+        className={`${classes.introModalButton} ${isOpen ? classes.open : ''}`}
         onClick={handleClick}
         disabled={isAnimating}
       >
-        <ModalButtonSVG />
+        <IntroModalButtonSVG />
       </button>
     </>
   );

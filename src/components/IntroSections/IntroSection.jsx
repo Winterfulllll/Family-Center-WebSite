@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 
 import Logo from '../Logo/Logo';
-import ModalButton from '../ModalButton/ModalButton';
+import IntroModalButton from '../IntroModalButton/IntroModalButton';
 import IntroPageNavigation from '../IntroPageNavigation/IntroPageNavigation';
 
 import classes from './IntroSection.module.css';
@@ -16,7 +16,7 @@ export default function IntroSection({ children, path }) {
         </IntroPageNavigation>
         <div className={classes.pageName}>{children.toUpperCase()}</div>
       </div>
-      <ModalButton />
+      <IntroModalButton />
     </section>
   );
 }
