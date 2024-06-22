@@ -1,4 +1,3 @@
-import ModalWindow from '../../components/IntroModalWindow/IntroModalWindow';
 import Header from '../../components/Header/Header';
 import MainSection from '../../components/MainSection/MainSection';
 import IntroSection from '../../components/IntroSections/IntroSection';

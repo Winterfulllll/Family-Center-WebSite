@@ -35,7 +35,7 @@
 .modalButton svg > g > line:nth-child(2),
 .modalButton svg > g > line:nth-child(3) {
   transform-origin: center center;
-  transition: transform 1s ease;
+  transition: transform 0.8s ease;
 }
 
 .modalButton.open svg > g > line:nth-child(2) {

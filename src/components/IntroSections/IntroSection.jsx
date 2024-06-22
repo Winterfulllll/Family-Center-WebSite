@@ -8,7 +8,7 @@ import classes from './IntroSection.module.css';
 
 export default function IntroSection({ children, path }) {
   return (
-    <section className={classes.container}>
+    <section className={classes.container} id='IntroSection'>
       <Logo />
       <div>
         <IntroPageNavigation path={path}>

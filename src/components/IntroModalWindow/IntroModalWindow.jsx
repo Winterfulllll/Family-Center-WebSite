@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { useEffect, useState, useRef } from 'react';
 import { createPortal } from 'react-dom';
 
@@ -5,9 +6,11 @@ import classes from './IntroModalWindow.module.css';
 
 const mountElement = document.getElementById('overlays');
 
-export default function IntroModalWindow({ isOpen = true }) {
+export default function IntroModalWindow({ isOpen = false }) {
   const [showModal, setShowModal] = useState(false);
   const overlayRef = useRef(mountElement);
+  let openTimeoutId = null;
+  let closeTimeoutId = null;
 
   useEffect(() => {
     const overlay = overlayRef.current;
@@ -16,17 +19,22 @@ export default function IntroModalWindow({ isOpen = true }) {
       setShowModal(true);
       document.body.style.overflow = 'hidden';
       overlay.style.display = 'flex';
-      setTimeout(() => {
+      openTimeoutId = setTimeout(() => {
         overlay.classList.add('open');
       }, 10);
     } else {
       overlay.classList.remove('open');
-      setTimeout(() => {
+      closeTimeoutId = setTimeout(() => {
         overlay.style.display = 'none';
         document.body.style.overflow = 'auto';
         setShowModal(false);
       }, 500);
     }
+
+    return () => {
+      clearTimeout(openTimeoutId);
+      clearTimeout(closeTimeoutId);
+    };
   }, [isOpen]);
 
   return createPortal(
@@ -38,3 +46,7 @@ export default function IntroModalWindow({ isOpen = true }) {
     overlayRef.current,
   );
 }
+
+IntroModalWindow.propTypes = {
+  isOpen: PropTypes.bool,
+};

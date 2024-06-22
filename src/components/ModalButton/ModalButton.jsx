@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 import IntroModalWindow from '../IntroModalWindow/IntroModalWindow';
 import ModalButtonSVG from '../../assets/icons/svgs/modal-button.svg';
