@@ -26,7 +26,7 @@ export default function Footer() {
       transition: {
         duration: 0.6,
         ease: 'easeInOut',
-        staggerChildren: 0.5,
+        staggerChildren: 0.3,
       },
     },
   };

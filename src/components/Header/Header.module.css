@@ -21,21 +21,24 @@
 }
 
 .headerAddress {
-  grid-column: 1 / 5;
-  margin-left: 30px;
+  grid-column: 1 / 7;
+  margin-left: 110px;
+  justify-self: start;
 }
 
 .headerPhone {
-  grid-column: 8 / 10;
+  grid-column: 8 / 11;
   padding-right: 0px !important;
   margin-left: 90px;
   min-width: 220px;
+  justify-self: end;
 }
 
 .headerContacts {
   grid-column: 11 / 12;
   padding-right: 0px !important;
-  margin-right: 130px;
+  margin-right: 40px;
+  justify-self: center;
 }
 
 .headerContacts a {
@@ -44,8 +47,5 @@
 }
 
 .soundSwitchButton {
-  grid-column: 12 / 13;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  grid-column: 12;
 }
