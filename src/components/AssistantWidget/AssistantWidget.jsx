@@ -43,7 +43,7 @@ export default function AssistantWidget({ isVisible = false }) {
   return createPortal(
     showWidget && (
       <Link
-        to={`${location.pathname}/#`}
+        to={location.pathname !== '/' ? location.pathname + '/#' : '/#'}
         className={`${classes.assistantWidget} ${showWidgetDelayed ? classes.visible : ''}`}
         onTransitionEnd={handleTransitionEnd}
         ref={widgetRef}

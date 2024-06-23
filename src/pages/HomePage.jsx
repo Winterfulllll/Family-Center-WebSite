@@ -15,6 +15,9 @@ export default function HomePage() {
           <AssistantMessage pos_x="right" pos_y="center">
             Это главная страница!
           </AssistantMessage>
+          <AssistantMessage pos_x="left" pos_y="center">
+            Это главная страница!
+          </AssistantMessage>
         </AssistantSection>
       </MainSection>
       <Footer />

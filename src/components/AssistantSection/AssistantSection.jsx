@@ -1,4 +1,4 @@
-import { useRef, useEffect, useState } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 
 import assistantAnimation from '/assistant-animation.webm';
@@ -27,11 +27,17 @@ export default function AssistantSection({ children }) {
     }
   }, [inView, hasPlayed]);
 
+  const getChildrenByPos = (pos) => {
+    return React.Children.toArray(children).filter(
+      (child) => child.props.pos_x === pos
+    );
+  };
+
   return (
     <>
       <AssistantWidget isVisible={!inView} />
       <section ref={ref} className={classes.container} id="AssistantSection">
-        {children.props.pos_x === 'left' && children}
+        <div className={classes.leftSide}>{getChildrenByPos('left')}</div>
         <video
           ref={videoRef}
           className={classes.assistantConstainer}
@@ -41,7 +47,7 @@ export default function AssistantSection({ children }) {
         >
           <source src={assistantAnimation} type="video/webm" />
         </video>
-        {children.props.pos_x === 'right' && children}
+        <div className={classes.rightSide}>{getChildrenByPos('right')}</div>
       </section>
     </>
   );
