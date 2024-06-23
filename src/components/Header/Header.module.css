@@ -26,14 +26,14 @@
 }
 
 .headerPhone {
-  grid-column: 9 / 11;
+  grid-column: 8 / 10;
   padding-right: 0px !important;
   margin-left: 90px;
   min-width: 220px;
 }
 
 .headerContacts {
-  grid-column: 11 / 13;
+  grid-column: 11 / 12;
   padding-right: 0px !important;
   margin-right: 130px;
 }
@@ -41,4 +41,11 @@
 .headerContacts a {
   text-decoration: none;
   color: black;
+}
+
+.soundSwitchButton {
+  grid-column: 12 / 13;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

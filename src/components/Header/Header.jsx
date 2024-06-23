@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 
 import classes from './Header.module.css';
+import SoundSwitchButton from '../SoundSwitchButton/SoundSwitchButton';
 
 export default function Header() {
   return (
@@ -12,6 +13,7 @@ export default function Header() {
       <div className={classes.headerContacts}>
         <Link to="/contacts">Контакты</Link>
       </div>
+      <SoundSwitchButton className={classes.soundSwitchButton}/>
     </header>
   );
 }

@@ -12,7 +12,7 @@ export const phychologist = {
   }
 };
 
-const branches = [
+export const branches = [
   {
     name: 'ГБУ Мой семейный центр "Оберег"',
     address: 'г. Москва, ул. Азовская, д. 33, корп. 3',
@@ -56,3 +56,8 @@ const branches = [
     email: 'obereg@social.mos.ru'
   }
 ];
+
+export const assistantPhrases = {
+  "/": "Привет! Я помогу тебе найти нужную информацию. Напиши мне, что тебе нужно.",
+  "/psychologist": "",
+}
