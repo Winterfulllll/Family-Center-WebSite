@@ -45,3 +45,54 @@
 .introModalButton.open svg > g > line:nth-child(3) {
   transform: translate(-10%, -10%) rotate(-45deg);
 }
+
+
+.introModalButtonMain {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  width: 100px;
+  align-self: flex-start;
+  margin-top: 5vh;
+}
+
+.introModalButtonMain.open {
+  z-index: 101;
+}
+
+/* Анимация круга */
+.introModalButtonMain svg > circle {
+  fill: #ffb67d;
+  transition: fill 0.5s ease;
+}
+
+.introModalButtonMain.open svg > circle {
+  fill: white;
+}
+
+/* Анимация средней линии */
+.introModalButtonMain svg > g > line:nth-child(1) {
+  stroke-dasharray: 622;
+  stroke-dashoffset: 0;
+  transition: stroke-dashoffset 0.5s ease-out;
+}
+
+.introModalButtonMain.open svg > g > line:nth-child(1) {
+  stroke-dashoffset: 622;
+}
+
+/* Анимация остальных линий */
+.introModalButtonMain svg > g > line:nth-child(2),
+.introModalButtonMain svg > g > line:nth-child(3) {
+  transform-origin: center center;
+  transition: transform 0.8s ease;
+}
+
+.introModalButtonMain.open svg > g > line:nth-child(2) {
+  transform: translate(-10%, 10%) rotate(45deg);
+}
+
+.introModalButtonMain.open svg > g > line:nth-child(3) {
+  transform: translate(-10%, -10%) rotate(-45deg);
+}
