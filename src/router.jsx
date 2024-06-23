@@ -1,23 +1,80 @@
-import { createBrowserRouter, RouterProvider, Navigate } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
-import HomePage from './pages/HomePage/HomePage';
-import ErrorPage from './pages/ErrorPage/ErrorPage';
-import OtherPage from './pages/OtherPage/OtherPage';
+import {
+  AboutPage,
+  ContactsPage,
+  ErrorPage,
+  HomePage,
+  SurveyPage,
+  ChildrenClubsPage,
+  FamilyConsultantPage,
+  GuardianshipPage,
+  LawyerPage,
+  LogopedistPage,
+  MediatorPage,
+  ParentClubsPage,
+  PsychologistPage,
+  TeenClubsPage,
+} from './pages';
 
 const router = createBrowserRouter(
   [
     {
       path: '/',
-      element: <HomePage path='/'/>,
+      element: <HomePage />,
       errorElement: <ErrorPage />,
     },
     {
-      path: '/other',
-      element: <OtherPage path='/other'/>,
+      path: '/services',
+      element: <HomePage />, // ДОБАВИТЬ ЛОГИКУ ЯКОРНОЙ ССЫЛКИ
     },
     {
-      path: '/FamilyCenterMainWebSite',
-      element: <Navigate to="https://www.facebook.com/" />,
+      path: '/services/children-clubs',
+      element: <ChildrenClubsPage />,
+    },
+    {
+      path: '/services/family-consultant',
+      element: <FamilyConsultantPage />,
+    },
+    {
+      path: '/services/guardianship',
+      element: <GuardianshipPage />,
+    },
+    {
+      path: '/services/lawyer',
+      element: <LawyerPage />,
+    },
+    {
+      path: '/services/logopedist',
+      element: <LogopedistPage />,
+    },
+    {
+      path: '/services/mediator',
+      element: <MediatorPage />,
+    },
+    {
+      path: '/services/parent-clubs',
+      element: <ParentClubsPage />,
+    },
+    {
+      path: '/services/psychologist',
+      element: <PsychologistPage />,
+    },
+    {
+      path: '/services/teen-clubs',
+      element: <TeenClubsPage />,
+    },
+    {
+      path: '/about',
+      element: <AboutPage />,
+    },
+    {
+      path: '/contacts',
+      element: <ContactsPage />,
+    },
+    {
+      path: '/survey',
+      element: <SurveyPage />,
     },
   ],
   { basename: import.meta.env.BASE_URL },

@@ -2,12 +2,11 @@ import { useRef, useEffect, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 
 import assistantAnimation from '/assistant-animation.webm';
-import AssistantMessage from '../AssistantMessage/AssistantMessage';
 
 import classes from './AssistantSection.module.css';
 import AssistantWidget from '../AssistantWidget/AssistantWidget';
 
-export default function AssistantSection() {
+export default function AssistantSection({ children }) {
   const videoRef = useRef(null);
   const [hasPlayed, setHasPlayed] = useState(false);
   const { ref, inView } = useInView({
@@ -32,6 +31,7 @@ export default function AssistantSection() {
     <>
       <AssistantWidget isVisible={!inView} />
       <section ref={ref} className={classes.container} id="AssistantSection">
+        {children.props.pos_x === 'left' && children}
         <video
           ref={videoRef}
           className={classes.assistantConstainer}
@@ -41,9 +41,7 @@ export default function AssistantSection() {
         >
           <source src={assistantAnimation} type="video/webm" />
         </video>
-        <AssistantMessage pos_x="right" pos_y="center">
-          Психолог поможет:
-        </AssistantMessage>
+        {children.props.pos_x === 'right' && children}
       </section>
     </>
   );

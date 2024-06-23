@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
+import { useLocation } from 'react-router-dom';
 import { createPortal } from 'react-dom';
 import PropTypes from 'prop-types';
 
@@ -10,6 +11,8 @@ import classes from './AssistantWidget.module.css';
 const mountElement = document.body;
 
 export default function AssistantWidget({ isVisible = false }) {
+  const location = useLocation();
+
   const [showWidget, setShowWidget] = useState(false);
   const [showWidgetDelayed, setShowWidgetDelayed] = useState(false);
   const widgetRef = useRef(null);
@@ -40,7 +43,7 @@ export default function AssistantWidget({ isVisible = false }) {
   return createPortal(
     showWidget && (
       <Link
-        to="/#"
+        to={`${location.pathname}/#`}
         className={`${classes.assistantWidget} ${showWidgetDelayed ? classes.visible : ''}`}
         onTransitionEnd={handleTransitionEnd}
         ref={widgetRef}

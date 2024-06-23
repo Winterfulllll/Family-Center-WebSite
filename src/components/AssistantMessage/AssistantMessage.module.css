@@ -52,17 +52,17 @@
 
 .triangle.left-top {
   transform: rotate(-90deg) scale(2) scale(0.5, 1) translate(50%, 0)
-    translate(-60px, 320px) rotate(90deg);
+    translate(-60px, 280px) rotate(90deg);
 }
 
 .triangle.left-center {
   transform: rotate(-90deg) scale(2) scale(0.5, 1) translate(50%, 0)
-    translate(-35px, 330px) rotate(160deg);
+    translate(-35px, 290px) rotate(160deg);
 }
 
 .triangle.left-bottom {
   transform: rotate(-90deg) scale(2) scale(0.5, 1) translate(50%, 0)
-    translate(-15px, 325px) rotate(140deg);
+    translate(-15px, 290px) rotate(140deg);
 }
 
 .chatBubble {

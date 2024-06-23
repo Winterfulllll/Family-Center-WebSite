@@ -2,22 +2,21 @@ import Header from '../../components/Header/Header';
 import MainSection from '../../components/MainSection/MainSection';
 import IntroSection from '../../components/IntroSections/IntroSection';
 import AssistantSection from '../../components/AssistantSection/AssistantSection';
+import AssistantMessage from '../../components/AssistantMessage/AssistantMessage';
 import Footer from '../../components/Footer/Footer';
-import TallDiv from '../../components/TallDiv';
 
-import './HomePage.css';
-import PsychologistSection1 from '../../components/PsychologistSection1/PsychologistSection1';
-
-export default function HomePage() {
-  const path = '/';
-
+export default function FamilyConsultantPage() {
   return (
     <>
       <Header />
       <MainSection>
-        <IntroSection path={path}>ПСИХОЛОГ</IntroSection>
-        <AssistantSection />
-        <PsychologistSection1 />
+        <IntroSection>СЕМЕЙНЫЙ КОНСУЛЬТАНТ</IntroSection>
+        <AssistantSection>
+          <AssistantMessage pos_x="right" pos_y="center">
+            ...
+          </AssistantMessage>
+        </AssistantSection>
+        {/* ДОБАВИТЬ */}
       </MainSection>
       <Footer />
     </>

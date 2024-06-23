@@ -1,0 +1,14 @@
+export { default as AboutPage } from './AboutPage';
+export { default as ContactsPage } from './ContactsPage';
+export { default as ErrorPage } from './ErrorPage';
+export { default as HomePage } from './HomePage';
+export { default as SurveyPage } from './SurveyPage';
+export { default as ChildrenClubsPage } from './ServicePages/ChildrenClubsPage';
+export { default as FamilyConsultantPage } from './ServicePages/FamilyConsultantPage';
+export { default as GuardianshipPage } from './ServicePages/GuardianshipPage';
+export { default as LawyerPage } from './ServicePages/LawyerPage';
+export { default as LogopedistPage } from './ServicePages/LogopedistPage';
+export { default as MediatorPage } from './ServicePages/MediatorPage';
+export { default as ParentClubsPage } from './ServicePages/ParentClubsPage';
+export { default as PsychologistPage } from './ServicePages/PsychologistPage';
+export { default as TeenClubsPage } from './ServicePages/TeenClubsPage';

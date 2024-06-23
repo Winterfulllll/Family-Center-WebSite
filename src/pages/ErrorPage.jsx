@@ -1,8 +1,6 @@
 import { useEffect } from 'react';
 import { useNavigate, useRouteError } from 'react-router-dom';
 
-import './ErrorPage.css';
-
 export default function ErrorPage() {
   const error = useRouteError();
   const navigate = useNavigate();
