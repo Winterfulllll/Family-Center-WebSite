@@ -37,6 +37,7 @@ export default function AssistantSection() {
           className={classes.assistantConstainer}
           muted
           width="100"
+          onClick={() => videoRef.current.play()}
         >
           <source src={assistantAnimation} type="video/webm" />
         </video>
