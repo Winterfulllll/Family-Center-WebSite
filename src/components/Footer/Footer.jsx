@@ -1,51 +1,103 @@
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { motion, useAnimation } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
 import classes from './Footer.module.css';
 
 export default function Footer() {
+  const controls = useAnimation();
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.2,
+  });
+
+  useEffect(() => {
+    if (inView) {
+      controls.start('visible');
+    }
+  }, [controls, inView]);
+
+  const variants = {
+    hidden: { opacity: 0, x: -20 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 0.6,
+        ease: 'easeInOut',
+        staggerChildren: 0.5,
+      },
+    },
+  };
+
   return (
     <footer className={classes.footer}>
       <div className={classes.footerInformation}>
-        <div className={classes.footerLeftPart}>
-          <div className={classes.footerLeftPartAdress}>
-            г.Москва, ул.Азовская,<br/>
+        <motion.div
+          ref={ref}
+          variants={variants}
+          initial="hidden"
+          animate={controls}
+          className={classes.footerLeftPart}
+        >
+          <motion.div
+            variants={variants}
+            className={classes.footerLeftPartAdress}
+          >
+            г.Москва, ул.Азовская,
+            <br />
             д.33, корп.3
-          </div>
-          <div className={classes.footerLeftPartNumber}>
+          </motion.div>
+          <motion.div
+            variants={variants}
+            className={classes.footerLeftPartNumber}
+          >
             +7 (495) 310-34-00
-          </div>
-        </div>
-        <div className={classes.footerCenterPart}>
-          <div className={classes.footerLeftPartMain}>
-            Главная
-          </div>
-          <div className={classes.footerLeftPartServices}>
-            Услуги
-          </div>
-          <div className={classes.footerLeftPartContacts}>
-            Контакты
-          </div>
-          <div className={classes.footerLeftPartCentre}>
-            Мойсемейныйцентр.москва
-          </div>
-        </div>
-        <div className={classes.footerRightPart}>
-          <div className={classes.footerRightPartCallNumber}>
-            <div className={classes.footerRightPartText}>
-              Закажите звонок
-            </div>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
+        <motion.div
+          variants={variants}
+          initial="hidden"
+          animate={controls}
+          className={classes.footerCenterPart}
+        >
+          <motion.div variants={variants}>
+            <Link to="/" className={classes.footerCenterPartMain}>
+              Главная
+            </Link>
+          </motion.div>
+          <motion.div variants={variants}>
+            <Link to="/services" className={classes.footerCenterPartServices}>
+              Услуги
+            </Link>
+          </motion.div>
+          <motion.div variants={variants}>
+            <Link to="/contacts" className={classes.footerCenterPartContacts}>
+              Контакты
+            </Link>
+          </motion.div>
+          <motion.div variants={variants}>
+            <Link
+              to="https://мойсемейныйцентр.москва/"
+              className={classes.footerCenterPartCentre}
+            >
+              Мойсемейныйцентр.москва
+            </Link>
+          </motion.div>
+        </motion.div>
+        <motion.div className={classes.footerRightPart}>
+          <motion.div
+            variants={variants}
+            initial="hidden"
+            animate={controls}
+            className={classes.footerRightPartCallNumber}
+          >
+            <div className={classes.footerRightPartText}>Закажите звонок</div>
+          </motion.div>
+        </motion.div>
       </div>
-      <div
-        style={{
-          background: 'black',
-          height: '2px',
-          marginBottom: "3%"
-        }}
-      />
-
+      <div className={classes.bottomLine} />
     </footer>
-    
   );
 }

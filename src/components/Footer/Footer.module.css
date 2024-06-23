@@ -1,39 +1,50 @@
-.footerInformation{
-    display: grid;
-    width: 90%;
-    grid-template-columns: 31% 45% auto;
-    margin-left: 5%;
-    margin-top: 2%;
-    font-weight: 600;
-    font-size: 18px;
+.footerInformation {
+  display: grid;
+  width: 90%;
+  grid-template-columns: 31% 45% auto;
+  margin-left: 5%;
+  margin-top: 2%;
+  font-weight: 600;
+  font-size: 18px;
 }
 
-.footerLeftPartNumber{
-    margin-top: 8%;
+.footerLeftPartNumber {
+  margin-top: 8%;
 }
 
-.footerLeftPartServices{
-    margin-top: 3%;
+.footerCenterPart {
+  display: flex;
+  flex-direction: column;
 }
 
-.footerLeftPartContacts{
-    margin-top: 3%;
+.footerCenterPart > div > * {
+  text-decoration: none;
+  color: black;
 }
 
-.footerLeftPartCentre{
-    margin-top: 3%;
-    margin-bottom: 10%;
+.footerCenterPart > * {
+  margin-top: 3%;
 }
 
-.footerRightPartCallNumber{
-    background-color: white;
-    width: 70%;
-    height: 40%;
-    border-radius: 30px;
-    margin-left: 16%;
-    align-content: center;
+.footerCenterPart > :nth-child(4) {
+  margin-bottom: 10%;
 }
 
-.footerRightPartText{
-    text-align: center;
+.footerRightPartCallNumber {
+  background-color: white;
+  width: 70%;
+  height: 40%;
+  border-radius: 30px;
+  margin-left: 16%;
+  align-content: center;
+}
+
+.footerRightPartText {
+  text-align: center;
+}
+
+.bottomLine {
+  background-color: black;
+  height: 2px;
+  margin-bottom: 3%;
 }

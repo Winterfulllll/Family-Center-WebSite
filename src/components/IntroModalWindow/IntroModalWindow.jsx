@@ -49,7 +49,7 @@ export default function IntroModalWindow({ isOpen = false }) {
           <div className={classes.headerAddress}>
             г.Москва, ул.Азовская, д.33, корп.3
           </div>
-          <Link to="/contacts" className={classes.headerMainPage}>
+          <Link to="/" className={classes.headerMainPage}>
             Главная
           </Link>
           <div className={classes.headerPages}>
