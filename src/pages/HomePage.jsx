@@ -12,7 +12,7 @@ export default function HomePage() {
       <MainSection>
         <IntroSection>ГЛАВНАЯ</IntroSection>
         <AssistantSection>
-          <AssistantMessage pos_x="right" pos_y="center">
+          <AssistantMessage pos_x="right" pos_y="top">
             Это главная страница!
           </AssistantMessage>
         </AssistantSection>
