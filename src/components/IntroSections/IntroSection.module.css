@@ -1,11 +1,11 @@
 .container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   padding-left: 3%;
   padding-right: 3%;
   border-radius: 70px;
-  height: 20%;
+  min-height: 20%;
+  min-height: 20%;
   margin-bottom: 55px;
   background-color: white;
   margin-top: 87px;
@@ -21,21 +21,37 @@
 .mainPagecontainer {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   padding-left: 3%;
   padding-right: 3%;
   border-radius: 70px;
-  height: 20%;
-  margin-bottom: 55px;
+  height: 100%;
+  margin-bottom: 10px;
   background-color: white;
   margin-top: 87px;
 }
 
 .mainPageName {
-  font-size: 7vw;
+  font-size: 4vw;
   font-weight: 700;
   background: linear-gradient(to bottom, #ffb967, #f46539);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+}
+
+.mainPageName2 {
+  font-size: 14vw;
+  font-weight: 700;
+  background: linear-gradient(to bottom, #ffb967, #f46539);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  letter-spacing: 30px;
+  height: 30vh;
+  margin-top: -40px;
+}
+
+.mainPafFullname{
+  text-align: center;
+  margin-top: 6vh;
 }

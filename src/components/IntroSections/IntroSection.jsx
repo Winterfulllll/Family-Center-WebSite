@@ -7,14 +7,19 @@ import { useLocation } from 'react-router-dom';
 
 import classes from './IntroSection.module.css';
 
-export default function IntroSection({ children }) {
+export default function IntroSection({ children, subtitle }) {
   const location = useLocation();
 
   return location.pathname === '/' ? (
     <section className={classes.mainPagecontainer} id="IntroSection">
-      <Logo />
-      <div>
-        <div className={classes.mainPageName}>{children.toUpperCase()}</div>
+        <Logo />
+      <div className={classes.mainPafFullname}>
+        <div>
+          <div className={classes.mainPageName}>{children.toUpperCase()}</div>
+        </div>
+        <div>
+          <div className={classes.mainPageName2}>{subtitle.toUpperCase()}</div>
+        </div>
       </div>
       <IntroModalButton />
     </section>
