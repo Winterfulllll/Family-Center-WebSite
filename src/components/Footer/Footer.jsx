@@ -93,7 +93,19 @@ export default function Footer() {
             animate={controls}
             className={classes.footerRightPartCallNumber}
           >
-            <div className={classes.footerRightPartText}>Закажите звонок</div>
+            <div className={classes.footerRightPartCallNumber}>
+              <label className={classes.footerRightPartText}>Закажите звонок:</label>
+              <div className={classes.footerRightPartinputContainer}>
+                <input
+                  type="text"
+                  placeholder="+7 (___) ___-__-__"
+                  className={classes.footerRightParInput}
+                />
+                <button className={classes.footerRightPartButton}>
+                  <span className={classes.footerRightPartButtonText}>&#10140;</span>
+                </button>
+              </div>
+            </div>
           </motion.div>
         </motion.div>
       </div>
