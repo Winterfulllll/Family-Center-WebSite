@@ -7,12 +7,13 @@
   border-radius: 70px;
   height:600px;
   background-color: rgba(255, 255, 255, 0.5);
+  width: 1465px;
 }
 
 .assistantConstainer {
   align-items: center;
   flex-direction: column;
-  width: 40%;
-  padding-bottom: 15vh;
+  width: 650px;
+  padding-bottom: 150px;
   object-fit: contain;
 }

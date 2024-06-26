@@ -6,6 +6,8 @@ import AssistantSection from '../components/AssistantSection/AssistantSection';
 import AssistantMessage from '../components/AssistantMessage/AssistantMessage';
 import Footer from '../components/Footer/Footer';
 import ButtonService from '../components/ButtonForService/ButtonForService';
+import Photo_phrase from '../components/Photo+phrase/Photo+phrase';
+import OursServices from '../components/OursServices/OursServices';
 
 export default function HomePage() {
   const subtitle = "ОБЕРЕГ";
@@ -29,6 +31,8 @@ export default function HomePage() {
           </AssistantMessage>
           <ButtonService pos_x="left" ></ButtonService>
         </AssistantSection>
+        <Photo_phrase />
+        <OursServices />
       </MainSection>
       <Footer />
     </>

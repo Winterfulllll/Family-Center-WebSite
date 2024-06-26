@@ -1,6 +1,7 @@
 .container {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding-left: 3%;
   padding-right: 3%;
   border-radius: 70px;
@@ -24,14 +25,14 @@
   padding-left: 3%;
   padding-right: 3%;
   border-radius: 70px;
-  height: 100%;
+  height: 476px;
   margin-bottom: 10px;
   background-color: white;
-  margin-top: 87px;
+  margin-top: 74px;
 }
 
 .mainPageName {
-  font-size: 4vw;
+  font-size: 86px;
   font-weight: 700;
   background: linear-gradient(to bottom, #ffb967, #f46539);
   -webkit-background-clip: text;
@@ -40,18 +41,17 @@
 }
 
 .mainPageName2 {
-  font-size: 14vw;
+  font-size: 300px;
   font-weight: 700;
   background: linear-gradient(to bottom, #ffb967, #f46539);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   letter-spacing: 30px;
-  height: 30vh;
   margin-top: -40px;
 }
 
 .mainPafFullname{
   text-align: center;
-  margin-top: 6vh;
+  margin-top: 60px;
 }

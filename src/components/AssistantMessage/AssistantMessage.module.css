@@ -14,8 +14,8 @@
   grid-template-rows: repeat(6, 1fr);
   padding: 3% 2%;
   height: 30%;
-  width: 100%;
-  min-width: 50vh;
+  width: 420px;
+  min-width: 100px;
 }
 
 .container.y-top {

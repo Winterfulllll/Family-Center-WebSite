@@ -1,0 +1,38 @@
+.mainPhotoAndPhrase{
+    width: 1448px;
+    height: 598px;
+    border-radius: 70px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 90px;
+    background-image: url('../../assets/icons/pngs/OberegAboutUs.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.Phrase{
+    width: 250px;
+    height: 260px;
+    background-color: white;
+    border-radius: 50px;
+    padding: 30px 60px;
+
+}
+
+.TextPrase{
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.button{
+    background-color: rgba(254, 220, 100, 1);
+    border-radius: 50px;
+    border-style: none;
+    width: 130px;
+    height: 50px;
+    font-weight: 600;
+    font-size: 32px;
+    color: black;
+    margin-top: 24px;
+}

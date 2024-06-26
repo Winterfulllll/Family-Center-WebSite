@@ -1,19 +1,35 @@
 .header {
   position: fixed;
   top: 0;
-  left: 0;
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: 10px;
+  max-width: 1640px;
+  min-width: 1650px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
   background-color: #ffb67d;
-  box-shadow: 0px 2px 6px 0px rgba(149, 130, 92, 0.3);
   z-index: 10;
+  height: 74px;
+  align-items: center;
+  padding: 0;
+  /*box-shadow: 0px 4px 4px 0px rgba(131, 125, 114, 0.3); */
+}
+
+.header2{
+  width: 100%;
+  justify-content: space-between !important;
+  display: flex !important;
+}
+
+.header3{
+  align-items: center !important;
+  display: flex !important;
+  box-sizing: inherit;
+  margin-right: 60px;
 }
 
 .header > div {
   display: flex;
-  padding: 30px;
   justify-content: center;
   align-items: center;
   font-weight: 600;
@@ -22,7 +38,7 @@
 
 .headerAddress {
   grid-column: 1 / 7;
-  margin-left: 110px;
+  margin-left: 30px;
   justify-self: start;
 }
 
