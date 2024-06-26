@@ -54,7 +54,7 @@
   cursor: pointer;
   width: 100px;
   align-self: flex-start;
-  margin-top: 5vh;
+  margin-top: 60px;
 }
 
 .introModalButtonMain.open {

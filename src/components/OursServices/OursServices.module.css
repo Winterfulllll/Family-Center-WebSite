@@ -1,0 +1,149 @@
+.mainServices{
+    height: 2160px;
+    width: 1428px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 70px;
+    padding-top: 30px;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 40px;
+}
+
+.textOurServices{
+    font-size: 48px;
+    font-weight: 600;
+    text-align: center !important;
+    margin-bottom: 40px;
+}
+
+.OurServicesPsychologist{
+    width: 290px;
+    height: 335px;
+    background-color: rgba(188, 147, 240, 1);
+    border-radius: 70px 150px;
+    padding: 80px;
+}
+
+.NameServices{
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 60px;
+}
+
+.DescriptionServices{
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.DetaileServices{
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50px;
+    border-style: none;
+    width: 225px;
+    height: 60px;
+    font-weight: 500;
+    font-size: 22px;
+    color: black;
+    margin-top: 80px;
+}
+
+.Button{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.OurServicesLawyer{
+    width: 350px;
+    height: 335px;
+    background-color: rgba(166, 147, 240, 1);
+    border-radius: 150px 70px;
+    padding: 80px;
+    margin-left: 25px;
+}
+
+.OurServicesFistrRow{
+    display: flex;
+}
+
+.OurServicesSecondRow{
+    display: flex;
+    margin-top: 25px;
+}
+
+.OurServicesThirdRow{
+    display: flex;
+    margin-top: 25px;
+}
+
+.OurServicesFourthRow{
+    display: flex;
+    margin-top: 25px;
+}
+
+.OurServicesMediator{
+    width: 290px;
+    height: 335px;
+    background-color: rgba(147, 179, 240, 1);
+    border-radius: 70px 150px;
+    padding: 80px;
+    margin-left: 25px;
+}
+
+.OurServicesCustody{
+    width: 485px;
+    height: 335px;
+    background-color: rgba(147, 156, 240, 1);
+    border-radius: 150px 70px;
+    padding: 80px;
+}
+
+.OurServicesConsultant{
+    width: 600px;
+    height: 335px;
+    background-color: rgba(147, 201, 240, 1);
+    border-radius: 70px 150px;
+    padding: 80px;
+    margin-left: 25px;
+}
+
+.Button2{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-top: 25px;
+}
+
+.OurServicesLogopedist{
+    width: 550px;
+    height: 335px;
+    background-color: rgba(147, 201, 240, 1);
+    border-radius: 70px 150px;
+    padding: 80px;
+}
+
+.OurServicesClubs{
+    width: 625px;
+    height: 335px;
+    background-color: rgba(147, 156, 240, 1);
+    border-radius: 150px 70px;
+    padding: 80px;
+    margin-left: 25px;
+}
+
+.OurServicesClubs2{
+    width: 480px;
+    height: 335px;
+    background-color: rgba(182, 147, 240, 1);
+    border-radius: 150px 70px;
+    padding: 80px;
+}
+
+.OurServicesClubs3{
+    width: 600px;
+    height: 335px;
+    background-color: rgba(205, 147, 240, 1);
+    border-radius: 70px 150px;
+    padding: 80px;
+    margin-left: 25px;
+}

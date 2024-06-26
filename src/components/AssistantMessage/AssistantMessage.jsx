@@ -29,9 +29,9 @@ export default function AssistantMessage({
   );
 
   return (
-    <div className={containerClassNames}>
+    <div className={classes.container}>
       {/* {pos_x !== 'center' && <TriangleSVG className={triangleClassNames} />} */}
-      <div className={chatBubbleClassNames}>{children}</div>
+      <div className={classes.chatBubble}>{children}</div>
     </div>
   );
 }
