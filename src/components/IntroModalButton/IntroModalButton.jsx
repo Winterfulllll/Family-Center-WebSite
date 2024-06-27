@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
+import { useLocation } from 'react-router-dom';
 
 import IntroModalWindow from '../IntroModalWindow/IntroModalWindow';
 import IntroModalButtonSVG from '../../assets/icons/svgs/intro-modal-button.svg';
-import { useLocation } from 'react-router-dom';
 
 import classes from './IntroModalButton.module.css';
 
@@ -20,27 +20,16 @@ export default function IntroModalButton() {
     }, 500);
   };
 
-  return location.pathname === '/' ?(
+  return (
     <>
-      <IntroModalWindow isOpen={isOpen} />
+      <IntroModalWindow isOpen={isOpen} onClose={() => setIsOpen(false)} />
       <button
-        className={`${classes.introModalButtonMain} ${isOpen ? classes.open : ''}`}
+        className={`${location.pathname === '/' ? classes.introModalButtonMain : classes.introModalButton} ${isOpen ? classes.open : ''}`}
         onClick={handleClick}
         disabled={isAnimating}
       >
         <IntroModalButtonSVG />
       </button>
     </>
-  ) : (
-    <>
-      <IntroModalWindow isOpen={isOpen} />
-      <button
-        className={`${classes.introModalButton} ${isOpen ? classes.open : ''}`}
-        onClick={handleClick}
-        disabled={isAnimating}
-      >
-        <IntroModalButtonSVG />
-      </button>
-    </>
-  )
+  );
 }

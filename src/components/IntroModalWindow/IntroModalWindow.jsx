@@ -1,13 +1,15 @@
 import PropTypes from 'prop-types';
 import { useEffect, useState, useRef } from 'react';
-import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
+import { Link, useLocation } from 'react-router-dom';
 import { createPortal } from 'react-dom';
 
 import classes from './IntroModalWindow.module.css';
 
 const mountElement = document.getElementById('overlays');
 
-export default function IntroModalWindow({ isOpen = false }) {
+export default function IntroModalWindow({ isOpen = false, onClose }) {
+  const location = useLocation();
   const [showModal, setShowModal] = useState(false);
   const overlayRef = useRef(mountElement);
   let openTimeoutId = null;
@@ -38,6 +40,15 @@ export default function IntroModalWindow({ isOpen = false }) {
     };
   }, [isOpen]);
 
+  const scrollWithOffset = (el) => {
+    onClose();
+    const headerHeight = document.querySelector('header')?.offsetHeight || 0;
+    window.scrollTo({
+      top: el.offsetTop - headerHeight,
+      behavior: 'smooth',
+    });
+  };
+
   return createPortal(
     showModal && (
       <div className={classes.modalWindowWrapper}>
@@ -49,19 +60,29 @@ export default function IntroModalWindow({ isOpen = false }) {
           <div className={classes.headerAddress}>
             г.Москва, ул.Азовская, д.33, корп.3
           </div>
-          <Link to="/" className={classes.headerMainPage}>
+          <HashLink to="/#" className={classes.headerMainPage}>
             Главная
-          </Link>
+          </HashLink>
           <div className={classes.headerPages}>
-            <Link to="/about" className={classes.headerAbout}>
+            <HashLink to="/about/#" className={classes.headerAbout}>
               О нас
-            </Link>
-            <Link to="/services" className={classes.headerServices}>
-              Услуги
-            </Link>
-            <Link to="/contacts" className={classes.headerContacts}>
+            </HashLink>
+            {location.pathname === '/' ? (
+              <HashLink
+                to="#ServicesSection"
+                className={classes.footerCenterPartServices}
+                scroll={scrollWithOffset}
+              >
+                Услуги
+              </HashLink>
+            ) : (
+              <Link to="/services" className={classes.footerCenterPartServices}>
+                Услуги
+              </Link>
+            )}
+            <HashLink to="/contacts/#" className={classes.headerContacts}>
               Контакты
-            </Link>
+            </HashLink>
             <Link
               to="https://мойсемейныйцентр.москва/"
               className={classes.headerContacts}

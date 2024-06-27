@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { HashLink as Link } from 'react-router-hash-link';
+import { HashLink } from 'react-router-hash-link';
 import { useLocation } from 'react-router-dom';
 import { createPortal } from 'react-dom';
 import PropTypes from 'prop-types';
@@ -40,20 +40,35 @@ export default function AssistantWidget({ isVisible = false }) {
     }
   };
 
+  const scrollWithOffset = (el) => {
+    setTimeout(() => {
+      const headerHeight = document.querySelector('header')?.offsetHeight || 0;
+      window.scrollTo({
+        top: el.offsetTop - headerHeight * 3,
+        behavior: 'smooth',
+      });
+    }, 100);
+  };
+
   return createPortal(
     showWidget && (
-      <Link
-        to={location.pathname !== '/' ? location.pathname + '/#' : '/#'}
+      <HashLink
+        to={
+          location.pathname !== '/'
+            ? location.pathname + '/#AssistantSection'
+            : '/#AssistantSection'
+        }
         className={`${classes.assistantWidget} ${showWidgetDelayed ? classes.visible : ''}`}
         onTransitionEnd={handleTransitionEnd}
         ref={widgetRef}
+        scroll={scrollWithOffset}
       >
         <img
           src={assistantFace}
           alt="Assistant Face"
           className={classes.assistantPicture}
         />
-      </Link>
+      </HashLink>
     ),
     mountElement,
   );

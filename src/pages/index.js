@@ -2,6 +2,7 @@ export { default as AboutPage } from './AboutPage';
 export { default as ContactsPage } from './ContactsPage';
 export { default as ErrorPage } from './ErrorPage';
 export { default as HomePage } from './HomePage';
+export { default as SectionRedirect } from './SectionRedirect';
 export { default as SurveyPage } from './SurveyPage';
 export { default as ChildrenClubsPage } from './ServicePages/ChildrenClubsPage';
 export { default as FamilyConsultantPage } from './ServicePages/FamilyConsultantPage';

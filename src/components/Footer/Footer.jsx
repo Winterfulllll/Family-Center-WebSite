@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
@@ -7,6 +8,8 @@ import classes from './Footer.module.css';
 
 export default function Footer() {
   const controls = useAnimation();
+  const location = useLocation();
+
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.2,
@@ -31,8 +34,16 @@ export default function Footer() {
     },
   };
 
+  const scrollWithOffset = (el) => {
+    const headerHeight = document.querySelector('header')?.offsetHeight || 0;
+    window.scrollTo({
+      top: el.offsetTop - headerHeight,
+      behavior: 'smooth',
+    });
+  };
+
   return (
-    <footer className={classes.footer}>
+    <footer className={classes.footer} id="Footer">
       <div className={classes.footerInformation}>
         <motion.div
           ref={ref}
@@ -63,19 +74,32 @@ export default function Footer() {
           className={classes.footerCenterPart}
         >
           <motion.div variants={variants}>
-            <Link to="/" className={classes.footerCenterPartMain}>
+            <HashLink to="/#" className={classes.footerCenterPartMain}>
               Главная
-            </Link>
+            </HashLink>
           </motion.div>
           <motion.div variants={variants}>
-            <Link to="/services" className={classes.footerCenterPartServices}>
-              Услуги
-            </Link>
+            {location.pathname === '/' ? (
+              <HashLink
+                to="#ServicesSection"
+                className={classes.footerCenterPartServices}
+                scroll={scrollWithOffset}
+              >
+                Услуги
+              </HashLink>
+            ) : (
+              <Link to="/services" className={classes.footerCenterPartServices}>
+                Услуги
+              </Link>
+            )}
           </motion.div>
           <motion.div variants={variants}>
-            <Link to="/contacts" className={classes.footerCenterPartContacts}>
+            <HashLink
+              to="/contacts/#"
+              className={classes.footerCenterPartContacts}
+            >
               Контакты
-            </Link>
+            </HashLink>
           </motion.div>
           <motion.div variants={variants}>
             <Link
@@ -94,7 +118,9 @@ export default function Footer() {
             className={classes.footerRightPartCallNumber}
           >
             <div className={classes.footerRightPartCallNumber}>
-              <label className={classes.footerRightPartText}>Закажите звонок:</label>
+              <label className={classes.footerRightPartText}>
+                Закажите звонок:
+              </label>
               <div className={classes.footerRightPartinputContainer}>
                 <input
                   type="text"
@@ -102,7 +128,9 @@ export default function Footer() {
                   className={classes.footerRightParInput}
                 />
                 <button className={classes.footerRightPartButton}>
-                  <span className={classes.footerRightPartButtonText}>&#10140;</span>
+                  <span className={classes.footerRightPartButtonText}>
+                    &#10140;
+                  </span>
                 </button>
               </div>
             </div>

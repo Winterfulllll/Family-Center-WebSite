@@ -6,7 +6,7 @@ import SoundSwitchButton from '../SoundSwitchButton/SoundSwitchButton';
 
 export default function Header() {
   return (
-    <header className={classes.header}>
+    <header className={classes.header} id="Header">
       <div className={classes.header2}>
         <div className={classes.headerAddress}>
           г.Москва, ул.Азовская, д.33, корп.3
@@ -16,7 +16,7 @@ export default function Header() {
           <div className={classes.headerContacts}>
             <Link to="/contacts">Контакты</Link>
           </div>
-          <SoundSwitchButton className={classes.soundSwitchButton}/>
+          <SoundSwitchButton className={classes.soundSwitchButton} />
         </div>
       </div>
     </header>

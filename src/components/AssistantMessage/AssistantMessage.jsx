@@ -15,17 +15,9 @@ export default function AssistantMessage({
   pos_x = 'center',
   pos_y = 'center',
 }) {
-  const containerClassNames = classNames(
-    classes.container,
-    classes[`y-${pos_y}`],
-  );
   const triangleClassNames = classNames(
     classes.triangle,
     classes[`${pos_x}-${pos_y}`],
-  );
-  const chatBubbleClassNames = classNames(
-    classes.chatBubble,
-    classes[`x-${pos_x}`],
   );
 
   return (

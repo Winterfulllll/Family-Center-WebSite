@@ -1,19 +1,19 @@
+import { useLocation } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 import Logo from '../Logo/Logo';
 import IntroModalButton from '../IntroModalButton/IntroModalButton';
 import IntroPageNavigation from '../IntroPageNavigation/IntroPageNavigation';
-import { useLocation } from 'react-router-dom';
 
 import classes from './IntroSection.module.css';
 
-export default function IntroSection({ children, subtitle }) {
+export default function IntroSection({ children, subtitle = null }) {
   const location = useLocation();
 
   return location.pathname === '/' ? (
-    <section className={classes.mainPagecontainer} id="IntroSection">
-        <Logo />
-      <div className={classes.mainPafFullname}>
+    <section className={classes.mainPageContainer}>
+      <Logo />
+      <div className={classes.mainPageFullName}>
         <div>
           <div className={classes.mainPageName}>{children.toUpperCase()}</div>
         </div>
@@ -24,10 +24,10 @@ export default function IntroSection({ children, subtitle }) {
       <IntroModalButton />
     </section>
   ) : (
-    <section className={classes.container} id="IntroSection">
+    <section className={classes.container}>
       <Logo />
       <div>
-        <IntroPageNavigation>
+        <IntroPageNavigation path={location.pathname}>
           {children.charAt(0).toUpperCase() + children.slice(1).toLowerCase()}
         </IntroPageNavigation>
         <div className={classes.pageName}>{children.toUpperCase()}</div>

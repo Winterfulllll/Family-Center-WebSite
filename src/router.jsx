@@ -5,6 +5,7 @@ import {
   ContactsPage,
   ErrorPage,
   HomePage,
+  SectionRedirect,
   SurveyPage,
   ChildrenClubsPage,
   FamilyConsultantPage,
@@ -26,7 +27,7 @@ const router = createBrowserRouter(
     },
     {
       path: '/services',
-      element: <HomePage />, // ДОБАВИТЬ ЛОГИКУ ЯКОРНОЙ ССЫЛКИ
+      element: <SectionRedirect sectionId="ServicesSection" />
     },
     {
       path: '/services/children-clubs',
