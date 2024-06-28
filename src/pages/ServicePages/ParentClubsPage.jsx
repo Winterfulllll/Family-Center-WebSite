@@ -12,7 +12,7 @@ export default function ParentClubsPage() {
       <MainSection>
         <IntroSection>РОДИТЕЛЬСКИЕ КЛУБЫ</IntroSection>
         <AssistantSection>
-          <AssistantMessage pos_x="right" pos_y="center">
+          <AssistantMessage pos_x="right" top="0px" left="-40px" rotation={20}>
             ...
           </AssistantMessage>
         </AssistantSection>

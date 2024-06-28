@@ -1,5 +1,5 @@
 import { HashLink } from 'react-router-hash-link';
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 
 import classes from './Header.module.css';
 import SoundSwitchButton from '../SoundSwitchButton/SoundSwitchButton';

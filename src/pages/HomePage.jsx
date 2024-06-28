@@ -18,18 +18,18 @@ export default function HomePage() {
       <MainSection>
         <IntroSection subtitle={subtitle}>Мой семейный центр</IntroSection>
         <AssistantSection>
-          <AssistantMessage pos_x="left" pos_y="top">
+          <AssistantMessage pos_x="left" bottom="20px" right="-40px" rotation={200}>
             <a>
               Вас приветствует <b>семейный консультант!</b>
             </a>
           </AssistantMessage>
-          <AssistantMessage pos_x="left" pos_y="center">
+          <AssistantMessage pos_x="left" top="20px" right="-40px" rotation={160}>
             Мы готовы прийти на помощь,
             <br />
             если ваша семья оказалась в <br />
             трудной жизненной ситуации!
           </AssistantMessage>
-          <AssistantMessage pos_x="right" pos_y="center">
+          <AssistantMessage pos_x="right" top="10px" left="-40px" rotation={20}>
             <a>
               Предлагаю пройти нашу <br />
               <b>интерактивную анкету!</b>

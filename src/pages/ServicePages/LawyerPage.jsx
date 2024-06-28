@@ -12,7 +12,7 @@ export default function LawyerPage() {
       <MainSection>
         <IntroSection>ЮРИСТ</IntroSection>
         <AssistantSection>
-          <AssistantMessage pos_x="right" pos_y="center">
+          <AssistantMessage pos_x="right" top="0px" left="-40px" rotation={20}>
             ...
           </AssistantMessage>
         </AssistantSection>

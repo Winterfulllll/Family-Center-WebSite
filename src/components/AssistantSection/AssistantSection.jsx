@@ -36,6 +36,9 @@ export default function AssistantSection({ children }) {
     );
   };
 
+  const leftSideChildren = getChildrenByPos('left');
+  const rightSideChildren = getChildrenByPos('right');
+
   return (
     <>
       <AssistantWidget isVisible={!sectionInView2} />
@@ -47,7 +50,9 @@ export default function AssistantSection({ children }) {
         className={classes.container}
         id="AssistantSection"
       >
-        <div className={classes.leftSide}>{getChildrenByPos('left')}</div>
+        {leftSideChildren.length > 0 && (
+          <div className={classes.leftSide}>{leftSideChildren}</div>
+        )}
         <video
           ref={videoRef}
           className={classes.assistantConstainer}
@@ -57,7 +62,9 @@ export default function AssistantSection({ children }) {
         >
           <source src={assistantAnimation} type="video/webm" />
         </video>
-        <div className={classes.rightSide}>{getChildrenByPos('right')}</div>
+        {rightSideChildren.length > 0 && (
+          <div className={classes.rightSide}>{rightSideChildren}</div>
+        )}
       </section>
     </>
   );

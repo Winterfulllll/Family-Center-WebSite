@@ -1,45 +1,11 @@
-.container {
+.assistantMessageContainer {
+  position: relative;
   display: flex;
   width: 420px;
   min-width: 100px;
 }
 
-.triangle {
-  fill: white;
-  position: absolute;
-}
-
-.triangle.right-top {
-  transform: rotate(-90deg) scale(2) scale(0.5, 1) translate(50%, 0)
-    translate(-80px, 25px) rotate(-30deg);
-}
-
-.triangle.right-center {
-  transform: rotate(-90deg) scale(2) scale(0.5, 1) translate(50%, 0)
-    translate(-35px, 30px) rotate(20deg);
-}
-
-.triangle.right-bottom {
-  transform: rotate(-90deg) scale(2) scale(0.5, 1) translate(50%, 0)
-    translate(-15px, 30px) rotate(40deg);
-}
-
-.triangle.left-top {
-  transform: rotate(-90deg) scale(2) scale(0.5, 1) translate(50%, 0)
-    translate(-60px, 280px) rotate(90deg);
-}
-
-.triangle.left-center {
-  transform: rotate(-90deg) scale(2) scale(0.5, 1) translate(50%, 0)
-    translate(-35px, 290px) rotate(160deg);
-}
-
-.triangle.left-bottom {
-  transform: rotate(-90deg) scale(2) scale(0.5, 1) translate(50%, 0)
-    translate(-15px, 290px) rotate(140deg);
-}
-
-.chatBubble {
+.assistantMessageChatBubble {
   display: flex;
   position: relative;
   justify-content: center;
@@ -56,4 +22,10 @@
   z-index: 1;
   background-color: white;
   background-size: contain;
+}
+
+.assistantMessageTriangle {
+  fill: white;
+  position: absolute;
+  width: 100px;
 }
