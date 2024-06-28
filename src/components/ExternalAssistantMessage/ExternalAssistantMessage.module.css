@@ -1,0 +1,29 @@
+.externalAssistantMessageContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.externalAssistantMessageTriangle {
+  fill: white;
+  position: absolute;
+  width: 100px;
+  transform: rotate(80deg);
+  left: 49%;
+  top: -50px;
+}
+
+.externalAssistantMessageText {
+  width: 100%;
+  background-color: white;
+  border-radius: 70px;
+  font-weight: 400;
+  font-size: 28px;
+  text-align: center;
+  padding: 30px 100px;
+  z-index: 1;
+}

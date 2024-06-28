@@ -15,10 +15,12 @@ export default function GuardianshipPage() {
         <AssistantSection>
           <AssistantMessage pos_x="right" top={30} left={-50} rotation={10}>
             <b>
-              Специалисты <br />
-              проконсультируют по <br />
-              вопросам опеки <br />
-              и попечительства
+              Специалисты
+              <br />
+              проконсультируют по
+              <br />
+              вопросам опеки
+              <br />и попечительства
             </b>
           </AssistantMessage>
           <AssistantButton pos_x="right" path="">

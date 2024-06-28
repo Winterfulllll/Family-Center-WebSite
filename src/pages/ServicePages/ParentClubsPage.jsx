@@ -13,9 +13,13 @@ export default function ParentClubsPage() {
         <IntroSection>РОДИТЕЛЬСКИЕ КЛУБЫ</IntroSection>
         <AssistantSection>
           <AssistantMessage pos_x="right" top={0} left={-40} rotation={20}>
-            <b>Предлагаем активности <br />
-            и мероприятия для <br />
-            родителей или законных представителей</b>
+            <b>
+              Предлагаем активности
+              <br />
+              и мероприятия для
+              <br />
+              родителей или законных представителей
+            </b>
           </AssistantMessage>
         </AssistantSection>
         {/* ДОБАВИТЬ */}

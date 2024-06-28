@@ -1,0 +1,17 @@
+.QuoteSectionContainer {
+  display: block;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  background-color: white;
+  border-radius: 90px;
+  padding: 25px;
+  margin-left: 10%;
+  margin-bottom: 45px;
+
+  text-align: center;
+  font-weight: 400;
+  font-size: 32px;
+  font-style: italic;
+}

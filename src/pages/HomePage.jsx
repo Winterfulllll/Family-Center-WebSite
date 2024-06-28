@@ -24,7 +24,8 @@ export default function HomePage() {
           <AssistantMessage pos_x="left" top={20} right={-40} rotation={160}>
             Мы готовы прийти на помощь,
             <br />
-            если ваша семья оказалась в <br />
+            если ваша семья оказалась в
+            <br />
             трудной жизненной ситуации!
           </AssistantMessage>
           <AssistantMessage
@@ -34,7 +35,8 @@ export default function HomePage() {
             left={-40}
             rotation={20}
           >
-            Предлагаю пройти нашу <br />
+            Предлагаю пройти нашу
+            <br />
             <b>интерактивную анкету!</b>
           </AssistantMessage>
           <AssistantButton pos_x="left" path="/#ServicesSection">

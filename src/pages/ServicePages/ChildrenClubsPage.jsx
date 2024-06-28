@@ -14,8 +14,10 @@ export default function ChildrenClubsPage() {
         <AssistantSection>
           <AssistantMessage pos_x="right" top={0} left={-40} rotation={20}>
             <b>
-              Предлагаем активности, <br />
-              занятия и мероприятия <br />
+              Предлагаем активности,
+              <br />
+              занятия и мероприятия
+              <br />
               для ваших детей
             </b>
           </AssistantMessage>

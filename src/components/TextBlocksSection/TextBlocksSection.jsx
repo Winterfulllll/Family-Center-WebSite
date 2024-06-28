@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+
 import classes from './TextBlocksSection.module.css';
 
 import { phychologistTexts, familyConsultantTexts } from '../../data';
