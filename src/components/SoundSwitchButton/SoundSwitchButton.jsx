@@ -10,7 +10,12 @@ import classes from './SoundSwitchButton.module.css';
 export default function SoundSwitchButton() {
   const [isSoundOn, setIsSoundOn] = useState(false);
   const location = useLocation();
-  const text = assistantPhrases[location.pathname];
+  const text =
+    assistantPhrases[
+      location.pathname === '/'
+        ? location.pathname
+        : '/' + location.pathname.split('/').filter(Boolean).join('/')
+    ];
 
   const { Text, speechStatus, start, pause, stop } = useSpeech({
     text,

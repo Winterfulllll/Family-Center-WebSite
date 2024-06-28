@@ -1,0 +1,99 @@
+.contactsSectionContainer {
+  display: inline-block;
+  justify-content: center;
+  padding: 50px 0px;
+  width: 100%;
+  background-color: white;
+  height: 4500px;
+  border-radius: 70px;
+}
+
+.branchContainer {
+  display: inline-block;
+  align-items: center;
+  justify-content: space-between;
+  text-align: start;
+  width: 100%;
+}
+
+.branchNameRow {
+  text-align: center;
+  font-size: 43px;
+  font-weight: 600;
+  margin-bottom: 50px;
+}
+
+.branchRow {
+  display: flex;
+  justify-content: center;
+  margin: 20px 100px;
+}
+
+.branchColLeftSide {
+  display: inline-block;
+  width: 60%;
+}
+
+.branchColRightSide {
+  display: inline-block;
+  width: 40%;
+  margin-right: 0%;
+}
+
+.branchSimpleText {
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.branchAddress,
+.branchWorkHours,
+.branchEmail,
+.branchPhone {
+  font-size: 35px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.branchEmail {
+  text-decoration: underline;
+}
+
+.bottomLine {
+  background-color: black;
+  height: 2px;
+  margin: 100px 0px 50px 0px;
+  width: 100%;
+}
+
+.branchButtons {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 30px;
+  margin-top: 50px;
+}
+
+.branchPanoramaButton,
+.branchRouteButton {
+  text-decoration: none;
+  color: black;
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 50px;
+  border-style: none;
+  width: 240px;
+  height: 80px;
+  font-weight: 600;
+  font-size: 35px;
+  border: 3px solid black;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: background-color 0.5s ease;
+}
+
+.branchPanoramaButton:hover,
+.branchRouteButton:hover {
+  background-color: rgba(255, 182, 125, 0.3);
+}

@@ -3,6 +3,7 @@ import MainSection from '../components/MainSection/MainSection';
 import IntroSection from '../components/IntroSections/IntroSection';
 import AssistantSection from '../components/AssistantSection/AssistantSection';
 import AssistantMessage from '../components/AssistantMessage/AssistantMessage';
+import ContactsSection from '../components/ContactsSection/ContactsSection';
 import Footer from '../components/Footer/Footer';
 
 export default function ContactsPage() {
@@ -13,10 +14,18 @@ export default function ContactsPage() {
         <IntroSection>КОНТАКТЫ</IntroSection>
         <AssistantSection>
           <AssistantMessage pos_x="right" pos_y="center">
-            ...
+            <a>
+              Здесь, вы можете увидеть все
+              <br />
+              наши филиалы, и посмотреть
+              <br />
+              обстановку в них, нажав
+              <br />
+              на кнопку <b>панорама</b>
+            </a>
           </AssistantMessage>
         </AssistantSection>
-        {/* ДОБАВИТЬ */}
+        <ContactsSection />
       </MainSection>
       <Footer />
     </>

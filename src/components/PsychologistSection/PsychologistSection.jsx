@@ -1,8 +1,8 @@
-import classes from './PsychologistSection1.module.css';
+import classes from './PsychologistSection.module.css';
 
 import { phychologist } from '../../data';
 
-export default function PsychologistSection1() {
+export default function PsychologistSection() {
   return (
     <div className={classes.container}>
       {Object.entries(phychologist.phrases).map(([key, phrase]) => (
