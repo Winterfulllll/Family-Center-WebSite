@@ -50,12 +50,17 @@ export default function AssistantSection({ children, link = null }) {
         }}
         className={classes.container}
         id="AssistantSection"
+        style={
+          leftSideChildren.length && rightSideChildren.length
+            ? { justifyContent: 'space-around' }
+            : { justifyContent: 'center' }
+        }
       >
         {leftSideChildren.length > 0 && (
           <div className={classes.leftSide}>{leftSideChildren}</div>
         )}
         {link ? (
-          <HashLink to={link}>
+          <HashLink to={link} className={classes.assistantLinkedConstainer}>
             <video
               ref={videoRef}
               className={classes.assistantConstainer}
@@ -72,6 +77,10 @@ export default function AssistantSection({ children, link = null }) {
             muted
             width="100"
             onClick={() => videoRef.current.play()}
+            style={{
+              marginLeft: rightSideChildren.length ? 0 : 100,
+              marginRight: leftSideChildren.length ? 0 : 100,
+            }}
           >
             <source src={assistantAnimation} type="video/webm" />
           </video>

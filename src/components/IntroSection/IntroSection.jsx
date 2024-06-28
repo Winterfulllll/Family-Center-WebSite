@@ -32,7 +32,7 @@ export default function IntroSection({ children, subtitle = null }) {
         </IntroPageNavigation>
         <div
           className={
-            children.length > 13 ? classes.longPageName : classes.pageName
+            children.length > 14 ? classes.longPageName : classes.pageName
           }
         >
           {children.toUpperCase()}

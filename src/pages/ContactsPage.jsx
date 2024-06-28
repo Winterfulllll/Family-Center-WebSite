@@ -1,6 +1,6 @@
 import Header from '../components/Header/Header';
 import MainSection from '../components/MainSection/MainSection';
-import IntroSection from '../components/IntroSections/IntroSection';
+import IntroSection from '../components/IntroSection/IntroSection';
 import AssistantSection from '../components/AssistantSection/AssistantSection';
 import AssistantMessage from '../components/AssistantMessage/AssistantMessage';
 import ContactsSection from '../components/ContactsSection/ContactsSection';

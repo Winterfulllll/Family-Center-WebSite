@@ -14,7 +14,9 @@ export default function AssistantMessage({
   bottom,
   left,
   right,
-  hide = false,
+  hideTriangle = false,
+  isLong = false,
+  width,
 }) {
   const triangleStyles = {};
 
@@ -31,8 +33,15 @@ export default function AssistantMessage({
   addStyle('right', right);
 
   return (
-    <div className={classes.assistantMessageContainer}>
-      {!hide && (
+    <div
+      className={
+        isLong
+          ? classes.assistantMessageLongContainer
+          : classes.assistantMessageContainer
+      }
+      style={width !== undefined ? { width } : {}}
+    >
+      {!hideTriangle && (
         <TriangleSVG
           className={classes.assistantMessageTriangle}
           style={triangleStyles}

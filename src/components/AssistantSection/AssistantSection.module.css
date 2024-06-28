@@ -27,22 +27,19 @@
   z-index: 2;
 }
 
+.assistantLinkedConstainer {
+  z-index: 2;
+}
+
 .leftSide,
 .rightSide {
   display: flex;
   flex-direction: column;
+  align-items: flex-end;
   animation: fadeIn 1.5s ease-in-out;
 }
 
 .leftSide > *,
 .rightSide > * {
   margin: 3% 0%;
-}
-
-.leftSide {
-  align-items: flex-end;
-}
-
-.rightSide {
-  align-items: flex-start;
 }
