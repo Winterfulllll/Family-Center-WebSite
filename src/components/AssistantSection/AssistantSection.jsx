@@ -1,6 +1,7 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { HashLink } from 'react-router-hash-link';
+import PropTypes from 'prop-types';
 
 import assistantAnimation from '/assistant-animation.webm';
 
@@ -92,3 +93,8 @@ export default function AssistantSection({ children, link = null }) {
     </>
   );
 }
+
+AssistantSection.propTypes = {
+  children: PropTypes.node.isRequired,
+  link: PropTypes.string,
+};

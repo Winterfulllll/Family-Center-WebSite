@@ -1,4 +1,4 @@
-.pictureWithTextContainer {
+.pictureWithTextContainer-1 {
   width: 1448px;
   height: 598px;
   border-radius: 70px;
@@ -6,6 +6,30 @@
   justify-content: flex-end;
   align-items: flex-end;
   padding: 90px;
+  background-size: cover;
+  background-position: center;
+}
+
+.pictureWithTextContainer-2 {
+  width: 1568px;
+  height: 700px;
+  border-radius: 70px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 30px;
+  background-size: cover;
+  background-position: center;
+}
+
+.pictureWithTextContainer-3 {
+  width: 1568px;
+  height: 700px;
+  border-radius: 70px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 30px;
   background-size: cover;
   background-position: center;
 }
@@ -44,4 +68,38 @@
 
 .mainPageButton:hover {
   background-color: rgb(254, 182, 100);
+}
+
+.logopedistPageTextContainer {
+  width: 600px;
+  height: 190px;
+  background-color: white;
+  border-radius: 60px;
+  padding: 30px 50px;
+  text-align: center;
+  align-items: center;
+}
+
+.logopedistPageTextTitle {
+  font-size: 85px;
+  font-weight: 600;
+  color: #b4904e;
+  margin-bottom: 20px;
+}
+
+.logopedistPageTextPhrase {
+  font-size: 26px;
+  font-weight: 400;
+}
+
+.mediatorPageTextContainer {
+  width: 500px;
+  height: 140px;
+  background-color: white;
+  border-radius: 60px;
+  padding: 30px 50px;
+  text-align: center;
+  align-items: center;
+  font-size: 38px;
+  font-weight: 600;
 }

@@ -13,10 +13,6 @@ function ServicesSectionButton({ path }) {
   );
 }
 
-ServicesSectionButton.propTypes = {
-  path: PropTypes.string.isRequired,
-};
-
 export default function ServicesSection() {
   return (
     <div className={classes.mainServices} id="ServicesSection">
@@ -113,3 +109,7 @@ export default function ServicesSection() {
     </div>
   );
 }
+
+ServicesSectionButton.propTypes = {
+  path: PropTypes.string.isRequired,
+};

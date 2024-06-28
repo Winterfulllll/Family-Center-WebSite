@@ -4,6 +4,7 @@ import IntroSection from '../../components/IntroSection/IntroSection';
 import AssistantSection from '../../components/AssistantSection/AssistantSection';
 import AssistantMessage from '../../components/AssistantMessage/AssistantMessage';
 import AssistantButton from '../../components/AssistantButton/AssistantButton';
+import PictureWithText from '../../components/PictureWithText/PictureWithText';
 import Footer from '../../components/Footer/Footer';
 
 export default function LawyerPage() {
@@ -35,7 +36,7 @@ export default function LawyerPage() {
             Запись на прием
           </AssistantButton>
         </AssistantSection>
-        {/* ДОБАВИТЬ */}
+        <PictureWithText variant={2} />
       </MainSection>
       <Footer />
     </>
