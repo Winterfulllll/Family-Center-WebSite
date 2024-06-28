@@ -1,4 +1,6 @@
 import PropTypes from 'prop-types';
+import { HashLink } from 'react-router-hash-link';
+import classNames from 'classnames';
 
 import TriangleSVG from '../../assets/icons/svgs/triangle.svg';
 
@@ -6,6 +8,7 @@ import classes from './AssistantMessage.module.css';
 
 export default function AssistantMessage({
   children,
+  link = null,
   rotation,
   top,
   bottom,
@@ -35,7 +38,19 @@ export default function AssistantMessage({
           style={triangleStyles}
         />
       )}
-      <div className={classes.assistantMessageChatBubble}>{children}</div>
+      {link ? (
+        <HashLink
+          to={link}
+          className={classNames(
+            classes.assistantMessageChat,
+            classes.assistantMessageLinkedChat,
+          )}
+        >
+          {children}
+        </HashLink>
+      ) : (
+        <div className={classes.assistantMessageChat}>{children}</div>
+      )}
     </div>
   );
 }

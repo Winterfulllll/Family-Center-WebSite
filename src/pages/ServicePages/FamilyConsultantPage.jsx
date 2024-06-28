@@ -3,6 +3,7 @@ import MainSection from '../../components/MainSection/MainSection';
 import IntroSection from '../../components/IntroSections/IntroSection';
 import AssistantSection from '../../components/AssistantSection/AssistantSection';
 import AssistantMessage from '../../components/AssistantMessage/AssistantMessage';
+import TextBlocksSection from '../../components/TextBlocksSection/TextBlocksSection';
 import Footer from '../../components/Footer/Footer';
 
 export default function FamilyConsultantPage() {
@@ -13,10 +14,11 @@ export default function FamilyConsultantPage() {
         <IntroSection>СЕМЕЙНЫЙ КОНСУЛЬТАНТ</IntroSection>
         <AssistantSection>
           <AssistantMessage pos_x="right" top="0px" left="-40px" rotation={20}>
-            ...
+            <b>Если ваша семья оказалась в
+            трудной жизненной ситуации:</b>
           </AssistantMessage>
         </AssistantSection>
-        {/* ДОБАВИТЬ */}
+        <TextBlocksSection />
       </MainSection>
       <Footer />
     </>

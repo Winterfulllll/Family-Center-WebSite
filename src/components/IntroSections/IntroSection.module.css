@@ -19,6 +19,14 @@
   padding-bottom: 30px;
 }
 
+.longPageName {
+  font-size: 4.8vw;
+  font-weight: 700;
+  color: #ffb67d;
+  padding-top: 15px;
+  padding-bottom: 55px;
+}
+
 .mainPageContainer {
   display: flex;
   justify-content: space-between;

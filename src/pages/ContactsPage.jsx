@@ -14,15 +14,13 @@ export default function ContactsPage() {
         <IntroSection>КОНТАКТЫ</IntroSection>
         <AssistantSection>
           <AssistantMessage pos_x="right" top="0px" left="-40px" rotation={20}>
-            <a>
-              Здесь, вы можете увидеть все
-              <br />
-              наши филиалы, и посмотреть
-              <br />
-              обстановку в них, нажав
-              <br />
-              на кнопку <b>панорама</b>
-            </a>
+            Здесь, вы можете увидеть все
+            <br />
+            наши филиалы, и посмотреть
+            <br />
+            обстановку в них, нажав
+            <br />
+            на кнопку <b>панорама</b>
           </AssistantMessage>
         </AssistantSection>
         <ContactsSection />

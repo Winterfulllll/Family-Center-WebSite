@@ -64,7 +64,11 @@ export default function IntroModalWindow({ isOpen = false, onClose }) {
             Главная
           </HashLink>
           <div className={classes.headerPages}>
-            <HashLink to="/about/#" className={classes.headerAbout}>
+            <HashLink
+              to="/about/#"
+              className={classes.headerAbout}
+              onClick={() => onClose()}
+            >
               О нас
             </HashLink>
             {location.pathname === '/' ? (
@@ -80,7 +84,11 @@ export default function IntroModalWindow({ isOpen = false, onClose }) {
                 Услуги
               </Link>
             )}
-            <HashLink to="/contacts/#" className={classes.headerContacts}>
+            <HashLink
+              to="/contacts/#"
+              className={classes.headerContacts}
+              onClick={() => onClose()}
+            >
               Контакты
             </HashLink>
             <Link

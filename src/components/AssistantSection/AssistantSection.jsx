@@ -1,12 +1,13 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
+import { HashLink } from 'react-router-hash-link';
 
 import assistantAnimation from '/assistant-animation.webm';
 
 import classes from './AssistantSection.module.css';
 import AssistantWidget from '../AssistantWidget/AssistantWidget';
 
-export default function AssistantSection({ children }) {
+export default function AssistantSection({ children, link = null }) {
   const videoRef = useRef(null);
   const [hasPlayed, setHasPlayed] = useState(false);
   const { ref: sectionRef, inView: sectionInView } = useInView({
@@ -53,15 +54,28 @@ export default function AssistantSection({ children }) {
         {leftSideChildren.length > 0 && (
           <div className={classes.leftSide}>{leftSideChildren}</div>
         )}
-        <video
-          ref={videoRef}
-          className={classes.assistantConstainer}
-          muted
-          width="100"
-          onClick={() => videoRef.current.play()}
-        >
-          <source src={assistantAnimation} type="video/webm" />
-        </video>
+        {link ? (
+          <HashLink to={link}>
+            <video
+              ref={videoRef}
+              className={classes.assistantConstainer}
+              muted
+              width="100"
+            >
+              <source src={assistantAnimation} type="video/webm" />
+            </video>
+          </HashLink>
+        ) : (
+          <video
+            ref={videoRef}
+            className={classes.assistantConstainer}
+            muted
+            width="100"
+            onClick={() => videoRef.current.play()}
+          >
+            <source src={assistantAnimation} type="video/webm" />
+          </video>
+        )}
         {rightSideChildren.length > 0 && (
           <div className={classes.rightSide}>{rightSideChildren}</div>
         )}

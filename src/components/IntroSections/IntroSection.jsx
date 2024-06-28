@@ -30,7 +30,13 @@ export default function IntroSection({ children, subtitle = null }) {
         <IntroPageNavigation path={location.pathname}>
           {children.charAt(0).toUpperCase() + children.slice(1).toLowerCase()}
         </IntroPageNavigation>
-        <div className={classes.pageName}>{children.toUpperCase()}</div>
+        <div
+          className={
+            children.length > 13 ? classes.longPageName : classes.pageName
+          }
+        >
+          {children.toUpperCase()}
+        </div>
       </div>
       <IntroModalButton />
     </section>
